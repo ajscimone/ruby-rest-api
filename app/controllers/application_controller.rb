@@ -25,7 +25,8 @@ class ApplicationController < Sinatra::Base
 
   put '/task/:id' do
     id = params[:id]
-    @@tasks.update_task(id.to_i)
+    task_params = JSON.parse(request.body.read)
+    @@tasks.update_task(id.to_i, task_params["title"], task_params["description"], task_params["done"])
   end
 
   delete '/task/:id' do
