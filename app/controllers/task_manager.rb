@@ -41,11 +41,25 @@ class Task_Manager
     end
 
     def update_task(id, title=nil, description=nil, done=nil)
-        return "not ready yet"
+        @tasks.each do |task|
+            if task[:id] == id
+                if title
+                    task[:title] = title
+                end
+                if description
+                    task[:description] = description
+                end
+                if done
+                    task[:done] = done # this one not working
+                end
+            end
+        end
+        return @tasks.to_json
     end
 
     def delete_task(id)
-        return "not ready yet"
+        @tasks.delete_if {|task| task[:id] == id }
+        return @tasks.to_json
     end
   end 
 
