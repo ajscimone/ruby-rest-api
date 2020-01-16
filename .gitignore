@@ -1,0 +1,4 @@
+db/migrate/
+db/development.sqlite
+db/schema.rb
+Gemfile.lock

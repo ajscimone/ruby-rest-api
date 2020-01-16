@@ -12,13 +12,14 @@ update
 Delete
 curl -i -H "Content-Type: application/json" -X DELETE http://localhost:9393/task/2
 
-http://127.0.0.1:9393/task/1
-
-
-
-https://medium.com/@salmaeng71/sinatra-todo-application-with-mvc-85f2997f2d17
-
-http://www.notearsonlydreams.io/blog/2015/05/13/babys-first-sinatra-app/
 -->
 
-# ruby-restful-api
+# ruby-rest-api
+
+A simple todos-like app built with Ruby, Sinatra used as the engine to generate the web functionality for the api, and ActiveRecord as an ORM for database persistence.
+
+In order to get up and running:
+
+1. Create a `development.sqlite` database file inside the `db/` folder and run the `Tasks.sql` file into it.
+2. Install the necessary packages with `bundler install`.
+3. Run `shotgun` to start the server.
